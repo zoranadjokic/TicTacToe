@@ -83,8 +83,8 @@ public class Main extends Application {
             }
         });
 
-        Button btInsturctions = new Button("Show instructions");
-        btInsturctions.setOnAction(e -> {
+        Button btInstructions = new Button("Show instructions");
+        btInstructions.setOnAction(e -> {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Instructions");
             alert.setHeaderText(null);
@@ -104,7 +104,7 @@ public class Main extends Application {
 
         hbTop.getChildren().addAll(btReload, btExit);
 
-        root.getChildren().addAll(btInsturctions,gp,lbWinner,hbTop);
+        root.getChildren().addAll(btInstructions,gp,lbWinner,hbTop);
 
 
         primaryStage.setScene(new Scene(root, 500,700));
@@ -129,7 +129,7 @@ public class Main extends Application {
             setOnMouseClicked(event -> {
                 if (!playable)
                     return;
-                //primery is the left click
+                //primary is the left click
                 if (event.getButton() == MouseButton.PRIMARY) {
                     if (!turnX)
                         return;
@@ -196,9 +196,11 @@ public class Main extends Application {
                 break;
             }
         }
+
     }
 
     private void playWinAnimation(Combo combo) {
+
         if(combo.tiles[0].getValue().equals("X"))
             lbWinner.setText("Player X won the game!");
         else

@@ -1,2 +1,2 @@
 # TicTacToe
-Simple TicTacToe game build using JavaFx library.
+Simple TicTacToe game built using JavaFx library.
